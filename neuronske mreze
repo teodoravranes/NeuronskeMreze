@@ -164,6 +164,17 @@ cout<<"Trenutna tacnost neuronske mreze: " test.izracunajUspeh()<<endl;
 
 }
 
+int meni()
+{
+int op;
+cout<<"1.Procesiraj"<<endl;
+cout<<"2.Potrebno optimizovati"<<endl;
+cout<<"3.Optimizuj"<<endl
+cout<<"4.Kraj"<<endl;
+cin>>op;
+return op;
+}
+
 
 
 
