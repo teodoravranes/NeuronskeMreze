@@ -54,4 +54,47 @@ return tip;
 }
 }
 
+enum StanjeTesta {START, PROCESIRANJE, OPTIMIZACIJA, KRAJ}
+
+klasa Test
+{
+private:
+NeuronskaMreza nm;
+double zeljeniProcenatUspeha;
+int brOptimizacija;
+StanjeTesta stanje;
+
+public:
+Test(double pr) : nm(3,200)
+{
+if(!(br>=0 && br<=1))
+zeljeniProcenatUspeha=0.85;
+else
+zeljeniProcenatUspeha=pr;
+
+stanje=START;
+brOptimizacija=0;
+}
+
+bool procesiraj() 
+{
+if(StanjeTesta==START || StanjeTesta==OPTIMIZACIJA)
+{
+if(zeljeniProcenatUspeha>nm.izracunajUspeh())
+{
+stanje=PROCESIRANJE;
+}
+else
+{
+stanje=KRAJ;
+cout<<"Broj optimizacija iznosi" brOptimizacija<<endl;
+cout<<"Zeljena uspesnost iznosi" zeljeniProcenatUspeha<<endl;
+cout<<"Tacnost iznosi" nm.izracunajUspeh()<<endl;
+cout<<"Test uspesno zavrsen!"<<endl;
+}
+return true;
+}else{
+return false;
+}
+}
 
