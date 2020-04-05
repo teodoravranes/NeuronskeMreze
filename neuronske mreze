@@ -54,7 +54,8 @@ return tip;
 }
 }
 
-enum StanjeTesta {START, PROCESIRANJE, OPTIMIZACIJA, KRAJ}
+enum StanjeTesta {START, PROCESIRANJE, OPTIMIZACIJA, KRAJ};
+enum TipOptimizacije {DODAJ_SLOJ, DODAJ_NEURON};
 
 klasa Test
 {
@@ -102,9 +103,24 @@ bool potrebnoOptimizovati()
 {
 if(stanje==PROCESIRANJE)
 {
-stanje=OPTIMIZOVANJE;
+stanje=OPTIMIZACIJA;
 return true;
 }else{
+return false;
+}
+}
+
+bool optimizuj(TipOptimizacije t)
+{
+if (stanje==OPTIMIZACIJA)
+{
+   if(t==DODAJ_SLOJ)
+   brSkrivenihSlojeva+=1;
+   else if(t=DODAJ_NEURON)
+   brNeuronaPoSloju+=1;
+   
+return true;
+} else {
 return false;
 }
 }
