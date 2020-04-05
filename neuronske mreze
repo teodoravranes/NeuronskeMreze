@@ -141,4 +141,29 @@ return stanje;
 }
 };
 
+void ispisiTest(const Test &test)
+{
+
+cout<<"Stanje: "<<endl;
+if(test.getStanje==START)
+cout<<"START"<<endl;
+else if(test.getStanje==OPTIMIZACIJA)
+cout<<"OPTIMIZACIJA"<<endl;
+else if(test.getStanje==PROCESIRANJE)
+cout<<"PROCESIRANJE"<<endl;
+else if(test.getStanje==KRAJ)
+cout<<"KRAJ"<<endl;
+
+cout<<"Tip neuronske mreze: "<<endl
+if(test.getTipMreze()==DUBOKA)
+cout<<"DUBOKA"<<endl;
+else if(test.getTipMreze()==OBICNA)
+cout<<"OBICNA"<<endl;
+
+cout<<"Trenutna tacnost neuronske mreze: " test.izracunajUspeh()<<endl;
+
+}
+
+
+
 
