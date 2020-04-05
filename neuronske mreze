@@ -175,6 +175,42 @@ cin>>op;
 return op;
 }
 
+int main()
+{
+int opp;
+bool b;
+Test testt(1.00);
+
+do{
+opp=meni();
+
+switch(opp)
+{
+case 1:
+b=testt.procesiraj();
+break;
+case 2:
+b=testt.potrebnoOptimizovati();
+break;
+case 3:
+cout<<"Izaberite tip optimizacije [1-dodaj sloj, 2-dodaj neuron]: "<<endl;
+int tipOp;
+cin>>tipOp;
+if(tipOp==1)
+b=testt.optimizuj(DODAJ_SLOJ);
+else if(tipOp==2)
+b=testt.optimizuj(DODAJ_NEURON);
+break;
+}
+if(b=true)
+ispisiTest(testt);
+
+}while(opp>=1 && opp<4);
+
+return 0;
+}
+
+
 
 
 
