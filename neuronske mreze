@@ -52,7 +52,7 @@ TipMreze tip=OBICNA;
 
 return tip;
 }
-}
+};
 
 enum StanjeTesta {START, PROCESIRANJE, OPTIMIZACIJA, KRAJ};
 enum TipOptimizacije {DODAJ_SLOJ, DODAJ_NEURON};
@@ -124,3 +124,21 @@ return true;
 return false;
 }
 }
+
+double izracunajUspeh() const
+{
+return nm.izracunajUspeh();
+}
+
+TipMreze getTipMreze() const
+{
+return nm.getTipMreze();
+}
+
+StanjeTesta getStanje() const
+{
+return stanje;
+}
+};
+
+
