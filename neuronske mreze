@@ -78,7 +78,7 @@ brOptimizacija=0;
 
 bool procesiraj() 
 {
-if(StanjeTesta==START || StanjeTesta==OPTIMIZACIJA)
+if(stanje==START || stanje==OPTIMIZACIJA)
 {
 if(zeljeniProcenatUspeha>nm.izracunajUspeh())
 {
@@ -98,3 +98,13 @@ return false;
 }
 }
 
+bool potrebnoOptimizovati()
+{
+if(stanje==PROCESIRANJE)
+{
+stanje=OPTIMIZOVANJE;
+return true;
+}else{
+return false;
+}
+}
