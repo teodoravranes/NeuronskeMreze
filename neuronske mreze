@@ -1,0 +1,57 @@
+#inlcude <iostream>
+#include <cmath>
+
+using namespace std;
+
+enum TipMreze {DUBOKA, OBICNA};
+
+class NeuronskaMreza
+{
+private:
+int brSkrivenihSlojeva;
+int brNeuronaPoSloju;
+
+public:
+NeuronskaMreza(int br1, int br2) 
+{
+if(br1<0)
+brSkrivenihSlojeva=0;
+else
+brSkrivenihSlojeva=br1; 
+
+if(br2<0)
+brNeuronaPoSloju=0;
+else
+brNeuronaPoSloju=br2;
+}
+
+void dodajSkriveniSloj()
+{
+brSkrivenihSlojeva+=1;
+cout<<"Broj skrivenih slojeva iznosi" brSkrivenihSlojeva<<endl;
+}
+
+void dodajNeuron()
+{
+brNeuronaPoSloju+=;
+cout<<"Broj neurona po sloju iznosi" brNeuronaPoSloju<<endl;
+}
+
+double izracunajUspeh() const 
+{
+double tacnost = 1 - 1/(log(brSkrivenihSlojeva * brNeuronaPoSloju);
+return tacnost;
+}
+
+TipMreze getTipMreze() const 
+{
+if(brNeuronaPoSloju>=1000)
+TipMreze tip=DUBOKA;
+else
+TipMreze tip=OBICNA;
+
+return tip;
+}
+}
+
+
